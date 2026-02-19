@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="container">
+        <div class="calculator">
+            <div class="header">
+                <div class="logo" aria-hidden="true">&#9889;</div>
+                <h2>Scientific Calculator</h2>
+                <button class="history-toggle" id="historyToggle" aria-label="Toggle history" aria-expanded="false" title="History">&#x1F553;</button>
+            </div>
+
+            <div class="display-wrapper">
+                <div class="display">
+                    <div class="expression" id="expression"></div>
+                    <div class="result" id="result">0</div>
+                </div>
+            </div>
+
+            <div class="button-grid">
+                <button class="btn clear" data-value="clear">AC</button>
+                <button class="btn delete" data-value="delete">DEL</button>
+                <button class="btn special" data-value="%">%</button>
+                <button class="btn operator" data-value="/">&divide;</button>
+
+                <button class="btn func" data-value="Math.sin(">sin</button>
+                <button class="btn func" data-value="Math.cos(">cos</button>
+                <button class="btn func" data-value="Math.tan(">tan</button>
+                <button class="btn operator" data-value="*">&times;</button>
+
+                <button class="btn number" data-value="7">7</button>
+                <button class="btn number" data-value="8">8</button>
+                <button class="btn number" data-value="9">9</button>
+                <button class="btn operator" data-value="-">&minus;</button>
+
+                <button class="btn number" data-value="4">4</button>
+                <button class="btn number" data-value="5">5</button>
+                <button class="btn number" data-value="6">6</button>
+                <button class="btn operator" data-value="+">+</button>
+
+                <button class="btn number" data-value="1">1</button>
+                <button class="btn number" data-value="2">2</button>
+                <button class="btn number" data-value="3">3</button>
+                <button class="btn func" data-value="Math.sqrt(">&radic;</button>
+
+                <button class="btn special" data-value="(">(</button>
+                <button class="btn number" data-value="0">0</button>
+                <button class="btn special" data-value=")">)</button>
+                <button class="btn func" data-value="**">x²</button>
+
+                <button class="btn special" data-value="Math.PI">&pi;</button>
+                <button class="btn special" data-value="Math.E">e</button>
+                <button class="btn special" data-value=".">.</button>
+                <button class="btn func" data-value="Math.log(">ln</button>
+
+                <button class="btn equals" data-value="=">=</button>
+            </div>
+        </div>
+
+        <div class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <h3>History</h3>
+                <button class="clear-history" id="clearHistory">Clear</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <p class="no-history">No calculations yet</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
